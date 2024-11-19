@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+from pyarrow import input_stream
 
 adet = st.number_input("")
 adet = int(adet)
@@ -34,5 +35,5 @@ for x in coinler:
 
 fiyat2=(float(secilen2["price_usd"]))
 
-st.write((fiyat1*adet)/fiyat2)
-
+sonuc=(fiyat1*adet)/fiyat2
+st.text_input("",sonuc)
